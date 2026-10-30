@@ -1,0 +1,29 @@
+{
+  "name": "beau-and-ag-wedding",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Wedding website for Beau & AG — August 7, 2027 — Rose Spring Farms, Travelers Rest, South Carolina",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "images": "python3 scripts/prepare-images.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/cormorant-garamond": "^5.3.0",
+    "@fontsource-variable/karla": "^5.3.0",
+    "@fontsource/marcellus": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "~5.9",
+    "vite": "^8.3.5"
+  }
+}

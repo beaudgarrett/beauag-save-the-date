@@ -1,0 +1,156 @@
+/* Signature jade vines, permanently framing the upper corners. */
+
+.vines {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 0;
+  color: var(--jade);
+}
+
+.vine {
+  position: absolute;
+  top: 0;
+  width: var(--vine-w, clamp(160px, 38vw, 520px));
+}
+
+.vine--left {
+  left: 0;
+}
+
+.vine--right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.vine__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.vine__vein {
+  stroke: var(--cream);
+  stroke-opacity: 0.55;
+}
+
+/* ——— Opening animation (first load only; see lib/intro.ts) ——— */
+
+@keyframes vine-draw {
+  from {
+    stroke-dashoffset: var(--len);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes vine-leaf {
+  0% {
+    opacity: 0;
+    transform: scale(0.08);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+html.intro .vine__stem,
+html.intro .vine__tendril {
+  stroke-dasharray: var(--len) var(--len);
+  animation: vine-draw var(--t, 1s) linear var(--d, 0s) both;
+}
+
+html.intro .vine__tendril {
+  animation-timing-function: cubic-bezier(0.3, 0.2, 0.4, 1);
+}
+
+html.intro .vine__leaf,
+html.intro .vine__bud {
+  animation: vine-leaf var(--t, 0.9s) var(--ease-out) var(--d, 0s) both;
+}
+
+@keyframes soft-in {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes photo-in {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes title-in {
+  from {
+    opacity: 0;
+    letter-spacing: 0.32em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: var(--title-track);
+  }
+}
+
+html.intro .site-header__brand {
+  animation: soft-in 1.8s ease 1.1s both;
+}
+
+html.intro .site-nav,
+html.intro .menu-toggle {
+  animation: fade-in 1.2s ease 1.9s both;
+}
+
+html.intro .hero picture {
+  animation: photo-in 1.8s ease 2.1s both;
+}
+
+html.intro .hero .framed__title {
+  animation: title-in 2s var(--ease-out) 2.6s both;
+}
+
+html.intro .hero__details {
+  animation: fade-up 1.4s ease 3.4s both;
+}
+
+html.intro .page:not(.page--home) {
+  animation: fade-in 1.4s ease 1.6s both;
+}

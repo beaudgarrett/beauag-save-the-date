@@ -1,0 +1,11 @@
+{
+  "name": "Beau & AG · August 7, 2027",
+  "short_name": "Beau & AG",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#F6F0E5",
+  "background_color": "#F6F0E5",
+  "display": "browser"
+}

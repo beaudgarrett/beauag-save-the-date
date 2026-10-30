@@ -1,0 +1,22 @@
+:root {
+  /* Wedding palette */
+  --cream: #f6f0e5;
+  --cream-deep: #efe6d6;
+  --brown: #49392e;
+  --brown-soft: #6b5a4d;
+  --jade: #427763;
+  --jade-deep: #355f4f;
+  --rule: rgba(73, 57, 46, 0.2);
+
+  /* Type */
+  --font-display: 'Marcellus', 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: 'Karla Variable', 'Karla', -apple-system, 'Segoe UI', sans-serif;
+  --font-accent: 'Cormorant Garamond Variable', 'Cormorant Garamond', Georgia, serif;
+
+  /* Rhythm */
+  --gutter: clamp(20px, 5vw, 48px);
+  --section-y: clamp(88px, 12vw, 168px);
+  --measure: 34rem;
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
