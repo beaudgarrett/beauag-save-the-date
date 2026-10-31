@@ -2,10 +2,7 @@
 
 export const storyIntro = {
   heading: 'Some love stories begin in unexpected places.',
-  paragraphs: [
-    'Ours began in a place that already meant so much.',
-    'In the summer of 2025, Beau and AG met at Clemson Presbyterian Church. Looking back, it’s hard to imagine a more beautiful place for our story to begin.',
-  ],
+  paragraphs: ['Ours began in a place that already meant so much.'],
 }
 
 export const scripture = {
