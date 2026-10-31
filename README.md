@@ -11,7 +11,7 @@ Everything guests see lives in `src/config/`:
 
 | File | What it holds |
 | --- | --- |
-| `wedding.ts` | Date, venue, address/directions, ceremony & reception times, dress code, travel, registry, RSVP, contact, closing verse |
+| `wedding.ts` | Date, venue, address/directions, ceremony & reception times, dress code, registry, RSVP, contact, closing verse |
 | `story.ts` | Our Story copy (home intro and full page) |
 | `faqs.ts` | Frequently asked questions |
 | `images.ts` | Photo paths and alt text |
@@ -20,7 +20,6 @@ Everything guests see lives in `src/config/`:
 Anything still `null` or an empty list shows **Coming Soon**. For example:
 
 - **Event times / dress code:** set `ceremonyTime`, `receptionTime`, `dressCode`.
-- **Hotels:** add entries to `travel.hotels` (`name`, `description`, `url`, `bookingCode`).
 - **Registry:** add `{ name, url }` entries to `registry.registries`.
 - **RSVP:** set `rsvp.isOpen = true`, `rsvp.url` and `rsvp.deadline`.
 

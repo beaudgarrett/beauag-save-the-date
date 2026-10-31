@@ -269,7 +269,7 @@
   font-size: clamp(17px, 2vw, 19px);
 }
 
-/* ——— Travel, Registry, FAQs, RSVP ——— */
+/* ——— Registry, FAQs, RSVP ——— */
 
 .info-section {
   padding: var(--section-y) var(--gutter);
@@ -315,31 +315,6 @@
 .inner-page .info-section--tinted,
 .inner-page .info-section--rsvp {
   background: transparent;
-}
-
-.entry-list {
-  width: 100%;
-  margin-top: 40px;
-  border-top: 1px solid var(--rule);
-}
-
-.entry-list li {
-  padding: 28px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.entry-list__title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.entry-list__meta {
-  font-size: 14px;
-  color: var(--brown-soft);
 }
 
 .registry-links {
@@ -447,7 +422,7 @@
 /* ——— Closing photograph ——— */
 
 .closing {
-  padding-top: var(--section-y);
+  padding: var(--section-y) 0 clamp(72px, 10vw, 128px);
 }
 
 .closing__lead {
@@ -524,30 +499,6 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
-
-.closing__signoff {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: clamp(48px, 7vw, 80px) var(--gutter) var(--section-y);
-  text-align: center;
-}
-
-.closing__signoff p:first-child {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 24px;
-  color: var(--brown-soft);
-}
-
-.closing__names {
-  font-family: var(--font-display);
-  font-size: clamp(24px, 4vw, 32px);
-  letter-spacing: 0.16em;
-  padding-left: 0.16em;
   text-transform: uppercase;
 }
 

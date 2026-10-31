@@ -22,10 +22,6 @@ export function Closing() {
           </span>
         </figcaption>
       </Reveal>
-      <Reveal className="closing__signoff">
-        <p>With love,</p>
-        <p className="closing__names">{wedding.couple.display}</p>
-      </Reveal>
     </section>
   )
 }

@@ -9,13 +9,6 @@
 
 export const COMING_SOON = 'Coming Soon'
 
-export interface Hotel {
-  name: string
-  description?: string
-  url?: string
-  bookingCode?: string
-}
-
 export interface Registry {
   name: string
   url: string
@@ -55,13 +48,6 @@ export const wedding = {
   ceremonyTime: null as string | null,
   receptionTime: null as string | null,
   dressCode: null as string | null,
-
-  travel: {
-    intro:
-      'For those joining us from out of town, travel and accommodation recommendations will be shared soon.',
-    hotels: [] as Hotel[],
-    transportation: null as string | null,
-  },
 
   registry: {
     intro:

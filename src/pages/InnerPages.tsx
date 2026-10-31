@@ -2,22 +2,12 @@ import { NextPage } from '../components/NextPage'
 import { Faqs } from '../sections/Faqs'
 import { RegistrySection } from '../sections/RegistrySection'
 import { Rsvp } from '../sections/Rsvp'
-import { Travel } from '../sections/Travel'
 import { Venue } from '../sections/Venue'
 
 export function VenuePage() {
   return (
     <div className="inner-page inner-page--venue">
       <Venue page />
-      <NextPage to="travel" />
-    </div>
-  )
-}
-
-export function TravelPage() {
-  return (
-    <div className="inner-page">
-      <Travel page />
       <NextPage to="registry" />
     </div>
   )
