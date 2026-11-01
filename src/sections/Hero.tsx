@@ -1,3 +1,4 @@
+import { Countdown } from '../components/Countdown'
 import { FramedTitle } from '../components/FramedTitle'
 import { photos } from '../config/images'
 import { wedding, venueLocation } from '../config/wedding'
@@ -27,6 +28,7 @@ export function Hero() {
         <p className="hero__venue">{wedding.venue.name}</p>
         <p className="hero__place">{venueLocation}</p>
       </div>
+      <Countdown />
     </section>
   )
 }
