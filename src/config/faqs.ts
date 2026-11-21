@@ -11,7 +11,7 @@ export const faqs: Faq[] = [
   {
     question: 'Can I bring a plus-one?',
     answer:
-      'Yes! If you’d like to bring a plus-one, please indicate that on your RSVP once it opens. We’ll review requests and let you know if we’re able to accommodate an additional guest based on available space.',
+      'Some invitations will include the option to bring a plus-one. If yours does, please let us know on your RSVP once it opens. If your invitation does not mention a plus-one, the invitation is for you alone.',
   },
   {
     question: 'Are children invited to the celebration?',
@@ -24,12 +24,7 @@ export const faqs: Faq[] = [
   {
     question: 'What is the dress code?',
     answer:
-      'Our wedding dress code will be announced soon. Please check back closer to the wedding date for more details.',
-  },
-  {
-    question: 'How do I let you know about dietary requirements or allergies?',
-    answer:
-      'Please contact us directly to let us know about any dietary restrictions or food allergies. We’ll do our best to accommodate your needs.',
+      'Our dress code is semi-formal.',
   },
   {
     question: 'If I can no longer attend, who should I contact?',

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Beau and AG//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:beau-and-ag-wedding-20270807@beaudgarrett.github.io
+DTSTAMP:20261121T000000Z
+DTSTART;VALUE=DATE:20270807
+DTEND;VALUE=DATE:20270808
+SUMMARY:Beau & AG’s Wedding
+LOCATION:Rose Spring Farms\, 44 Langley Road\, Travelers Rest\, SC 29690
+DESCRIPTION:Join us at Rose Spring Farms in Travelers Rest\, SC. More detai
+ ls at https://beaudgarrett.github.io/beauag-save-the-date/
+URL:https://beaudgarrett.github.io/beauag-save-the-date/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

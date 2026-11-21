@@ -1,3 +1,4 @@
+import { AddToCalendar } from '../components/AddToCalendar'
 import { Countdown } from '../components/Countdown'
 import { FramedTitle } from '../components/FramedTitle'
 import { photos } from '../config/images'
@@ -29,6 +30,9 @@ export function Hero() {
         <p className="hero__place">{venueLocation}</p>
       </div>
       <Countdown />
+      <div className="hero__calendar">
+        <AddToCalendar />
+      </div>
     </section>
   )
 }
