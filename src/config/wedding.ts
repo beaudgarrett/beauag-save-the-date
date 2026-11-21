@@ -44,10 +44,10 @@ export const wedding = {
       'We cannot wait to gather with our family and friends at Rose Spring Farms to celebrate the beginning of our marriage.',
   },
 
-  // Event details that have not been announced yet.
+  // Event details. `null` shows "Coming Soon".
   ceremonyTime: null as string | null,
   receptionTime: null as string | null,
-  dressCode: null as string | null,
+  dressCode: 'Semi-Formal' as string | null,
 
   registry: {
     intro:

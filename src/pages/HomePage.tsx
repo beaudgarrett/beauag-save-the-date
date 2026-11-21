@@ -1,4 +1,5 @@
 import { Closing } from '../sections/Closing'
+import { Contact } from '../sections/Contact'
 import { Faqs } from '../sections/Faqs'
 import { Hero } from '../sections/Hero'
 import { Interlude } from '../sections/Interlude'
@@ -18,6 +19,7 @@ export function HomePage() {
       <RegistrySection />
       <Faqs />
       <Rsvp />
+      <Contact />
       <Closing />
     </>
   )

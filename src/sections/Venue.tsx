@@ -1,3 +1,4 @@
+import { AddToCalendar } from '../components/AddToCalendar'
 import { FramedTitle } from '../components/FramedTitle'
 import { Reveal } from '../components/Reveal'
 import { photos } from '../config/images'
@@ -54,10 +55,13 @@ export function Venue({ page = false }: { page?: boolean }) {
             <span className="visually-hidden"> (opens directions in a new tab)</span>
           </a>
         </div>
-        <a className="button button--outline" href={wedding.venue.directionsUrl} target="_blank" rel="noopener noreferrer">
-          Get Directions
-          <span className="visually-hidden"> (opens in a new tab)</span>
-        </a>
+        <div className="venue__actions">
+          <a className="button button--outline" href={wedding.venue.directionsUrl} target="_blank" rel="noopener noreferrer">
+            Get Directions
+            <span className="visually-hidden"> (opens in a new tab)</span>
+          </a>
+          <AddToCalendar />
+        </div>
       </Reveal>
     </section>
   )
