@@ -1,3 +1,4 @@
+import { AddressPrompt } from '../sections/AddressForm'
 import { Closing } from '../sections/Closing'
 import { Contact } from '../sections/Contact'
 import { Faqs } from '../sections/Faqs'
@@ -16,6 +17,7 @@ export function HomePage() {
       <StoryIntro />
       <Interlude />
       <Venue />
+      <AddressPrompt />
       <RegistrySection />
       <Faqs />
       <Rsvp />

@@ -3,7 +3,7 @@ import { SiteHeader } from './components/SiteHeader'
 import type { RouteId } from './config/routes'
 import { useRouter } from './lib/router'
 import { HomePage } from './pages/HomePage'
-import { FaqPage, RegistryPage, RsvpPage, VenuePage } from './pages/InnerPages'
+import { AddressPage, FaqPage, RegistryPage, RsvpPage, VenuePage } from './pages/InnerPages'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { StoryPage } from './pages/StoryPage'
 
@@ -13,6 +13,7 @@ const PAGES: Record<RouteId, () => React.JSX.Element> = {
   venue: VenuePage,
   registry: RegistryPage,
   faqs: FaqPage,
+  address: AddressPage,
   rsvp: RsvpPage,
 }
 

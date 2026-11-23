@@ -4,7 +4,7 @@
  * GitHub Pages.
  */
 
-export type RouteId = 'home' | 'story' | 'venue' | 'registry' | 'faqs' | 'rsvp'
+export type RouteId = 'home' | 'story' | 'venue' | 'registry' | 'faqs' | 'address' | 'rsvp'
 
 export interface RouteDef {
   id: RouteId
@@ -19,6 +19,7 @@ export const routes: RouteDef[] = [
   { id: 'venue', path: '/venue/', label: 'Venue', title: 'The Venue · Beau & AG' },
   { id: 'registry', path: '/registry/', label: 'Registry', title: 'Registry · Beau & AG' },
   { id: 'faqs', path: '/faqs/', label: 'FAQs', title: 'Frequently Asked Questions · Beau & AG' },
+  { id: 'address', path: '/address/', label: 'Address', title: 'Send Us Your Address · Beau & AG' },
   { id: 'rsvp', path: '/rsvp/', label: 'RSVP', title: 'RSVP · Beau & AG' },
 ]
 

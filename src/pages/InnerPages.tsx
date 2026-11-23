@@ -1,4 +1,5 @@
 import { NextPage } from '../components/NextPage'
+import { AddressForm } from '../sections/AddressForm'
 import { Contact } from '../sections/Contact'
 import { Faqs } from '../sections/Faqs'
 import { RegistrySection } from '../sections/RegistrySection'
@@ -28,6 +29,15 @@ export function FaqPage() {
     <div className="inner-page">
       <Faqs page />
       <Contact />
+      <NextPage to="address" />
+    </div>
+  )
+}
+
+export function AddressPage() {
+  return (
+    <div className="inner-page">
+      <AddressForm />
       <NextPage to="rsvp" />
     </div>
   )

@@ -11,7 +11,7 @@ Everything guests see lives in `src/config/`:
 
 | File | What it holds |
 | --- | --- |
-| `wedding.ts` | Date, venue, address/directions, ceremony & reception times, dress code, registry, RSVP, contact, closing verse |
+| `wedding.ts` | Date, venue, address/directions, ceremony & reception times, dress code, registry, RSVP, mailing-address form link, contact, closing verse |
 | `story.ts` | Our Story copy (home intro and full page) |
 | `faqs.ts` | Frequently asked questions |
 | `images.ts` | Photo paths and alt text |
@@ -22,6 +22,7 @@ Anything still `null` or an empty list shows **Coming Soon**. For example:
 - **Event times / dress code:** set `ceremonyTime`, `receptionTime`, `dressCode`.
 - **Registry:** add `{ name, url }` entries to `registry.registries`.
 - **RSVP:** set `rsvp.isOpen = true`, `rsvp.url` and `rsvp.deadline`.
+- **Address form:** guests send mailing addresses through a Google Form (`addressForm`). Answers go to your Google account, not this repository. Set `addressForm.url` to `null` to hide it.
 
 Never put guest lists, addresses or RSVP answers in this repository. It is public.
 

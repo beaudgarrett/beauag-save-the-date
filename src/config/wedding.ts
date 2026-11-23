@@ -63,6 +63,20 @@ export const wedding = {
     intro: 'We look forward to celebrating with you. RSVP details will be available soon.',
   },
 
+  // Google Form where guests send their mailing address for invitations.
+  // Responses go to the couple's private Google account, never to this repo.
+  // Set to null to hide the page link and homepage prompt.
+  addressForm: {
+    url: 'https://forms.gle/K3n8KEsPcR5C9Fcn9' as string | null,
+    embedUrl:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfM0Jp-B4ZMqYEBxstVycyuGe48s8H_n_PjTBgPpTJdJOESxw/viewform?embedded=true' as
+        | string
+        | null,
+    intro:
+      'We would love to send you a wedding invitation! Please share your mailing address below so it finds its way to you.',
+    prompt: 'We would love to send you a wedding invitation! Please share your mailing address so it finds its way to you.',
+  },
+
   contact: {
     phoneDisplay: '(864) 940-2687',
     phoneHref: 'tel:+18649402687',
