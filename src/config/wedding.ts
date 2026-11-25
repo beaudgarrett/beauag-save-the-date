@@ -74,6 +74,8 @@ export const wedding = {
         | null,
     intro:
       'We would love to send you a wedding invitation! Please share your mailing address below so it finds its way to you.',
+    // Shown at the top of the address page once a guest submits the form.
+    thanks: "Your address has been received. We can't wait to celebrate with you!",
     prompt: 'We would love to send you a wedding invitation! Please share your mailing address so it finds its way to you.',
   },
 
