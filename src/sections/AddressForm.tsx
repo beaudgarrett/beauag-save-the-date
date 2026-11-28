@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { routeFor } from '../config/routes'
@@ -6,14 +7,48 @@ import { Link } from '../lib/router'
 
 const form = wedding.addressForm
 
-/** The full page: the Google Form, embedded, with a plain link as a fallback. */
+/**
+ * The full page: the Google Form, embedded, with a plain link as a fallback.
+ *
+ * The form is cross-origin, so the page cannot see inside it. It can only see
+ * the frame load a new page: the 1st load is the form, the 2nd is Google's
+ * confirmation page after Submit, the 3rd is the form again if the guest picks
+ * "Submit another response", and so on. Every even-numbered load is a
+ * submission, so the page scrolls to the top and thanks the guest there.
+ */
 export function AddressForm() {
+  const loads = useRef(0)
+  const [submitted, setSubmitted] = useState(false)
+  const thanksRef = useRef<HTMLDivElement>(null)
+
+  function handleFrameLoad() {
+    loads.current += 1
+    if (loads.current % 2 !== 0) return
+    setSubmitted(true)
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' })
+    thanksRef.current?.focus({ preventScroll: true })
+  }
+
   return (
     <section className="info-section" aria-labelledby="address-title">
       <Reveal className="info-section__inner">
         <SectionHeading id="address-title" level="h1">
           Send Us Your Address
         </SectionHeading>
+        <div
+          ref={thanksRef}
+          tabIndex={-1}
+          role="status"
+          className={submitted ? 'address-thanks' : 'visually-hidden'}
+        >
+          {submitted && (
+            <>
+              <p className="address-thanks__title">Thank you!</p>
+              <p className="address-thanks__body">{form.thanks}</p>
+            </>
+          )}
+        </div>
         <p className="body-copy">{form.intro}</p>
       </Reveal>
       {form.embedUrl && (
@@ -23,6 +58,7 @@ export function AddressForm() {
             title="Mailing address form"
             className="address-form__frame"
             loading="lazy"
+            onLoad={handleFrameLoad}
           >
             Loading…
           </iframe>

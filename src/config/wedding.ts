@@ -67,13 +67,15 @@ export const wedding = {
   // Responses go to the couple's private Google account, never to this repo.
   // Set to null to hide the page link and homepage prompt.
   addressForm: {
-    url: 'https://forms.gle/K3n8KEsPcR5C9Fcn9' as string | null,
+    url: 'https://forms.gle/xnG7LHXNxcmVovfD8' as string | null,
     embedUrl:
-      'https://docs.google.com/forms/d/e/1FAIpQLSfM0Jp-B4ZMqYEBxstVycyuGe48s8H_n_PjTBgPpTJdJOESxw/viewform?embedded=true' as
+      'https://docs.google.com/forms/d/e/1FAIpQLSfmjqHUfKKfHUkqNRE3YGVmDf57bogBdenvRnLzc8O4_b9Bqw/viewform?embedded=true' as
         | string
         | null,
     intro:
       'We would love to send you a wedding invitation! Please share your mailing address below so it finds its way to you.',
+    // Shown at the top of the address page once a guest submits the form.
+    thanks: "Your address has been received. We can't wait to celebrate with you!",
     prompt: 'We would love to send you a wedding invitation! Please share your mailing address so it finds its way to you.',
   },
 
