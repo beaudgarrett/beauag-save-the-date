@@ -47,7 +47,7 @@ export const wedding = {
   // Event details. `null` shows "Coming Soon".
   ceremonyTime: null as string | null,
   receptionTime: null as string | null,
-  dressCode: 'Semi-Formal' as string | null,
+  dressCode: 'Semi-Formal · No jeans, please' as string | null,
 
   registry: {
     intro:

@@ -24,7 +24,7 @@ export const faqs: Faq[] = [
   {
     question: 'What is the dress code?',
     answer:
-      'Our dress code is semi-formal.',
+      'Our dress code is semi-formal. Please, no jeans.',
   },
   {
     question: 'If I can no longer attend, who should I contact?',
